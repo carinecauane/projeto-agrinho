@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAgro - Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>EcoAgro 🌱</h1>
+        <p>Agro Forte, Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Calculadora de Insumos Sustentáveis</h2>
+            <p>Insira a área do seu plantio para calcular uma estimativa ecológica de consumo de água e fertilizante orgânico por dia.</p>
+            
+            <form id="calc-form">
+                <div class="input-group">
+                    <label for="area">Tamanho da Área (em hectares):</label>
+                    <input type="number" id="area" min="0" step="0.1" placeholder="Ex: 5.5" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="cultura">Tipo de Cultura:</label>
+                    <select id="cultura" required>
+                        <option value="">Selecione...</option>
+                        <option value="graos">Grãos (Soja/Milho)</option>
+                        <option value="hortalicas">Hortaliças</option>
+                        <option value="frutas">Frutíferas</option>
+                    </select>
+                </div>
+                
+                <button type="button" onclick="calcularRecursos()">Calcular Manejo Ideal</button>
+            </form>
+        </section>
+
+        <section id="resultado" class="card hidden">
+            <h3>Resultado do Diagnóstico Ecológico</h3>
+            <div id="resultado-texto"></div>
+        </section>
+
+        <section class="card dicas">
+            <h3>Dicas de Sustentabilidade para o Campo</h3>
+            <ul>
+                <li><strong>Rotação de Culturas:</strong> Alterne as espécies plantadas para manter o solo rico em nutrientes sem excesso de químicos.</li>
+                <li><strong>Captação de Água:</strong> Utilize sistemas de cisterna para aproveitar a água da chuva na irrigação.</li>
+                <li><strong>Zonas Verdes:</strong> Mantenha as Áreas de Preservação Permanente (APPs) intactas para proteger as fontes de água locais.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoAgro - Tecnologia a serviço do produtor e da natureza.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
